@@ -1,0 +1,22 @@
+svg dashed line
+- nachteil pfad muss direkt modifiziert werden
+- dazu müssten kontrollpunkte gemeinsam gezogen werden, einen alleine sieht komisch aus. könnte man mit mit übergeordnetem kontrollpunlt machen aber scheint aufwändig
+
+
+webgl 
+- effekt: shader maps
+- pfad aus svg? flow field? diskrete werte?
+- zeichnen?
+
+canvas2d
+- effekt: circle-point collision
+- diskrete werte
+- pfad aus svg? diskrete werte?
+- zeichnen einfach
+
+interpolieren
+
+diskretisieren
+- lookup tabelle mit wert der hinzuaddiert wird, nachteil drift
+- lookup table mit neuer pos
+- nachteil: speed kann nicht angepasst werden. höchstens beim entwerfen der tabelle
