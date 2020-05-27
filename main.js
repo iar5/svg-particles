@@ -4,8 +4,9 @@ import mobileSVG from './assets/svg_mobile.js'
 
 const Stage = (function(canvas, isMobile){
     const PATHS = isMobile ? mobileSVG : desktopSVG
-    const SVGwidth = isMobile ? 800 : 1600 
-    const SVGheight = isMobile ? 1600 : 800
+
+    const SVGwidth = isMobile ? 400 : 1600 // sizes used in the svg file
+    const SVGheight = isMobile ? 800 : 800
     const MR = isMobile ? 100 : 150 // mouse radius
 
     // following values depend on sample size
@@ -21,11 +22,18 @@ const Stage = (function(canvas, isMobile){
 
     resize()
 
+    var touching = false
+    var touch_visibility = 1
+
     var mousepos = []; // in svg/canvas coord space
     var mousePosTemp = [];
     ['mousemove', 'touchmove'].forEach(function(t) {
         window.addEventListener(t, e => { 
             if(paused) return
+
+            touching = true
+            touch_visibility = 1
+
             if(e.touches) 
                 getMousePosInCanvas(canvas, e.touches[0], mousePosTemp)
             else 
@@ -34,9 +42,10 @@ const Stage = (function(canvas, isMobile){
             mousepos[1] = mousePosTemp[1] * (canvas.height/canvas.clientHeight)/s - drawOffset[1]
         });
     });
-    window.addEventListener("touchend", e => { 
-        mousepos[0] = undefined
-        mousepos[1] = undefined
+    ['touchstart', 'mousemove', 'touchmove'].forEach(function(t) {
+        window.addEventListener(t, e => { 
+            touching = false
+        })
     })
 
 
@@ -52,6 +61,9 @@ const Stage = (function(canvas, isMobile){
 
         ctx.fillStyle ="#1C1F40"
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        touch_visibility += touching? 0.01 : -0.01
+        touch_visibility = Math.min(Math.max(touch_visibility, 0), 1);
 
         t++
         let o = (t*SPEED)%PARTICLE_OFFSET  
@@ -102,7 +114,7 @@ const Stage = (function(canvas, isMobile){
 
         let dist = distance(pos, mousepos)
         if(dist < MR)
-            size *= 1+(1-dist/MR)*5
+            size *= 1+((1-dist/MR)*5)*touch_visibility
 
         ctx.beginPath();
         ctx.arc((pos[0]+drawOffset[0])*s, (pos[1]+drawOffset[1])*s, size, 0, Math.PI<<2);
