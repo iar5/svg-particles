@@ -1,6 +1,6 @@
 (readme.md work in progress)
 
-# SVG Path Animation
+# SVG Path Particle Animation
 
 ## Description
 
@@ -17,11 +17,12 @@ interpolatopn between discretized points to compress lower sample rates (to save
 
 performant, smooth, small
 
-Showcase: https://iar5.github.io/svg-particles/app/
+Showcase: https://iar5.github.io/svg-path-particles/app/
 
 ## Why
 
-I testes  (see previous approaches for older versions)
+Simple, but nice interactive background animation for some kind of landing or start-page
+(see previous approaches for older versions)
 
 svg dashed line
 - nachteil pfad muss direkt modifiziert werden
