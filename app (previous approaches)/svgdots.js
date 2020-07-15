@@ -1,6 +1,7 @@
-// example with svg dots
+// <script src="https://d3js.org/d3.v3.min.js"></script>
+// <script src="https://d3js.org/queue.v1.min.js"></script>
 
-queue().defer(d3.xml, "assets/KV.svg", "image/svg+xml").await(ready);
+queue().defer(d3.xml, "assets/kv.svg", "image/svg+xml").await(ready);
 
 function ready(error, xml) {
     var importedNode = document.importNode(xml.documentElement, true);

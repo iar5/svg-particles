@@ -1,4 +1,7 @@
-queue().defer(d3.xml, "assets/KVd.svg", "image/svg+xml").await(ready);
+// <script src="https://d3js.org/d3.v3.min.js"></script>
+// <script src="https://d3js.org/queue.v1.min.js"></script>
+
+queue().defer(d3.xml, "assets/kv.svg", "image/svg+xml").await(ready);
 
 const speed = 1
 const particles_distance_between = 10 // normalized on path length
