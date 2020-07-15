@@ -17,6 +17,8 @@ interpolatopn between discretized points to compress lower sample rates (to save
 
 performant, smooth, small
 
+Showcase: https://iar5.github.io/svg-particles/app/
+
 ## Why
 
 I testes  (see previous approaches for older versions)
@@ -68,4 +70,4 @@ cd app
 http-server
 ```
 
-And you should see the magic happen.
+And you should see the magic happen. 
