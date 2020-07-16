@@ -6,33 +6,31 @@
 
 ## What
 
-goal was to animate particles along multiple paths
-the final result is based on svg path (spline) discretized particle movement
-there are some older approches in this repository included
-
-On top there are some mouse interaction and special particles
-
-smooth mouse/touch effects
-interpolatopn between discretized points to compress lower sample rates (to save file size)
-
-performant, smooth, small
-
+Simple, but nice interactive background animation for some kind of landing or start-page.
 Showcase: https://iar5.github.io/svg-path-particles/app/
+
+Features
+ - movement based on svg file paths
+ - spline/svg path particle movement
+ - discretized for performance
+ - interpolation between discretized points to compress lower sample rates (to save file size)
+ - interactive smooth mouse/touch effects
+
 
 ## Why
 
-Simple, but nice interactive background animation for some kind of landing or start-page
+Since I never worked with SVG before I first tried 
 (see previous approaches for older versions)
 
 svg dashed line
 - nachteil pfad muss direkt modifiziert werden
 - dazu müssten kontrollpunkte gemeinsam gezogen werden, einen alleine sieht komisch aus. könnte man mit mit übergeordnetem kontrollpunlt machen aber scheint aufwändig
 
-
-webgl 
+webgl shader
 - effekt: shader maps
 - pfad aus svg? flow field? diskrete werte?
 - zeichnen?
+- ez and nice interaction with displacement effect based on mouse position
 
 canvas2d
 - effekt: circle-point collision
