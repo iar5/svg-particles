@@ -2,7 +2,7 @@ import desktopSVG from './svg_desktop.js'
 import mobileSVG from './svg_mobile.js'
 
 
-const Stage = (function(canvas, isMobile){
+export default const Stage = (function(canvas, isMobile){
     const PATHS = isMobile ? mobileSVG : desktopSVG
 
     const SVGwidth = isMobile ? 400 : 1600 // sizes used in the svg file
@@ -192,8 +192,3 @@ function interpolate(pos1, pos2, t, result=[]){
     result[1] = (1-t)*pos1[1] + t*pos2[1]
     return result
 }
-
-
-
-var canvas = document.getElementById("canvas")
-var stage = new Stage(canvas, false)
