@@ -1,7 +1,3 @@
-import desktopSVG from './svg_desktop.js'
-import mobileSVG from './svg_mobile.js'
-
-
 /**
  * @param canvas {DOMCanvasElement}
  * @param svg {Array} discretized svg 
