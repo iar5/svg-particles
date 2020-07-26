@@ -23,8 +23,17 @@
 </style>
 
 <script type="module">
+	import desktopSVG from './svg_desktop.js'
+	import mobileSVG from './svg_mobile.js'
 	import Stage from './Stage.js'
 	
 	let canvas = document.getElementById("canvas")
-	let stage = new Stage(canvas, false)
+	
+	let mobileVersion = false
+	if(mobileVersion){
+	    	let stage = new Stage(canvas, desktopSVG, 1600, 800, 150)    
+    	}
+	else {
+		let stage = new Stage(canvas, mobileSVG, 400, 800, 100)
+	}
 </script>
