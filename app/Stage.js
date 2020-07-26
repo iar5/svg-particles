@@ -2,7 +2,7 @@ import desktopSVG from './svg_desktop.js'
 import mobileSVG from './svg_mobile.js'
 
 
-export default const Stage = (function(canvas, isMobile){
+const Stage = (function(canvas, isMobile){
     const PATHS = isMobile ? mobileSVG : desktopSVG
 
     const SVGwidth = isMobile ? 400 : 1600 // sizes used in the svg file
@@ -170,7 +170,7 @@ export default const Stage = (function(canvas, isMobile){
         }
     }
 })
-
+export default Stage
 
 
 // https://stackoverflow.com/questions/17130395/real-mouse-position-in-canvas
