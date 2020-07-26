@@ -2,12 +2,18 @@ import desktopSVG from './svg_desktop.js'
 import mobileSVG from './svg_mobile.js'
 
 
-const Stage = (function(canvas, isMobile){
-    const PATHS = isMobile ? mobileSVG : desktopSVG
-
-    const SVGwidth = isMobile ? 400 : 1600 // sizes used in the svg file
-    const SVGheight = isMobile ? 800 : 800
-    const MR = isMobile ? 100 : 150 // mouse radius
+/**
+ * @param canvas {DOMCanvasElement}
+ * @param svg {Array} discretized svg 
+ * @param width {Number} svg internal width
+ * @param height {Number} svg internal height
+ * @param mr {Number} mouse radius
+ */
+const Stage = (function(canvas, _svg, _width, _height, _mr){
+    const PATHS = _svg
+    const SVGwidth = _width
+    const SVGheight = _height
+    const MR = _mr
 
     // following values depend on sample size
     const SPEED = 0.1 // float 
