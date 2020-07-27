@@ -15,7 +15,7 @@ Features
  - discretized for performance
  - interpolation between discretized points to compress lower sample rates (to save file size)
  - interactive smooth mouse/touch effects
-
+ - automatically smart resizing 
 
 ## Why
 
