@@ -53,14 +53,15 @@ A simple webserver. I used the npm http-server which can be installed via `npm i
 
 ### 1. Discretize SVG
 
-In `discretizer/discretize.js` set the path to your svg file and adjust `DEC` and `SAMPLESTEP` to your needs and SVG sizing.
+The first step is to discretized svg file, since this doesn't need to be done in realtime.
+In `discretizer/discretize.js` set the path to your svg file and adjust the parameters to your needs and your SVG sizing(**!**).
 
 ``` bash
 cd discretizer
 http-server
 ```
 
-and open http://127.0.0.1:8080 in your browser. If everythink worked fine you will see an array of numbers, which is the discretized represenations of your SVG file. Save the output in a way making it accessable for a `app/main.js` (e.g. create a variable or save it in a separate file like I did with `app/svg_desktop.js`).
+and open it in your browser. If everythink worked fine you will see an array of numbers, which is the discretized represenations of your SVG file. Save the output in a way making it accessable for the `app/main.js` (e.g. create a variable or save it in a separate file like I did with `app/svg_desktop.js` for example).
 
 ### 2. Run application
 
