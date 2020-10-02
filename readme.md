@@ -1,35 +1,29 @@
-(readme.md work in progress)
-
 # SVG Path Particle Animation
 
 ## Description
 
 ## What
 
-Simple, but nice interactive background animation for some kind of landing or start-page.
-Showcase: https://iar5.github.io/svg-path-particles/app/
+simple but nice interactive animation for e.g. landing pages.
+live demo: https://iar5.github.io/svg-path-particles/app/
 
 Features
- - movement based on svg file paths
- - spline/svg path particle movement
- - discretized for performance
- - interpolation between discretized points to compress lower sample rates (to save file size)
+ - particle movement based on svg spline paths
+ - spline discretized for performance
+ - interpolation between discretized points to compress lower sample rates (and reduce file size)
  - interactive smooth mouse/touch effects
- - automatically smart resizing 
+ - smart resizing 
  - optimised for retine displays
+ - es6 module
 
-## Why
-
-Since I never worked with SVG before I first tried 
-(see previous approaches for older versions)
+## Previous approaches
 
 svg dashed line
 - nachteil pfad muss direkt modifiziert werden
 - dazu müssten kontrollpunkte gemeinsam gezogen werden, einen alleine sieht komisch aus. könnte man mit mit übergeordnetem kontrollpunlt machen aber scheint aufwändig
 
 webgl shader
-- effekt: shader maps
-- pfad aus svg? flow field? diskrete werte?
+- wie pfad aus svg? flow field? diskrete werte?
 - zeichnen?
 - ez and nice interaction with displacement effect based on mouse position
 
@@ -44,7 +38,7 @@ diskretisieren + interpolieren
 - lookup table mit neuer pos
 - nachteil: speed kann nicht angepasst werden. höchstens beim entwerfen der tabelle
 
-## How
+## Usage
 
 ### 0. Install prerequirements
 
@@ -70,5 +64,3 @@ cd ..
 cd app
 http-server
 ```
-
-And you should see the magic happen. 
