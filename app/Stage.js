@@ -33,6 +33,7 @@ const Stage = (function(canvas, _svg, _width, _height, _mr){
             if(paused) return
 
             touching = true
+            touch_visibility += 0.1
 
             if(e.touches) 
                 getMousePosInCanvas(canvas, e.touches[0], mousePosTemp)
