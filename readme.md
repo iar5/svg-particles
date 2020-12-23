@@ -2,8 +2,6 @@
 
 ## Description
 
-## What
-
 simple but nice interactive animation for e.g. landing pages.
 live demo: https://iar5.github.io/svg-path-particles/app/
 
