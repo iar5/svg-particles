@@ -1,18 +1,13 @@
-# SVG Path Particle Animation
+# Interactive SVG Animation
 
-## Description
-
-simple but nice interactive animation for e.g. landing pages.
-live demo: https://iar5.github.io/svg-path-particles/app/
-
-Features
- - particle movement based on svg spline paths
- - spline discretized for performance
- - interpolation between discretized points to compress lower sample rates (and reduce file size)
- - interactive smooth mouse/touch effects
- - smart resizing 
- - optimised for retine displays
- - es6 module
+## Features
+ - particle movement along svg spline paths
+ - spline discretization (for performance reasons)
+ - interpolation between discretized points (to counteract low sample rates and reduce file size)
+ - smoothed mouse and touch interactive effects
+ - responsive
+ - retine display optimisation
+ - ES6 modules
 
 
 ## Usage
