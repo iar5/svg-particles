@@ -1,5 +1,7 @@
 # Interactive SVG Animation
 
+- Demo: https://iar5.github.io/svg-path-particles/app/
+
 ## Features
  - particle movement along svg spline paths
  - spline discretization (for performance reasons)
